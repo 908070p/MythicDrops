@@ -18,7 +18,9 @@ import java.util.List;
 
 public final class AuraRunnable extends BukkitRunnable {
 
-    @Override
+Bukkit.getScheduler().runTaskAsynchronously(plugin, new Runnable() {
+@Override
+public void run() {
     public void run() {
         for (World w : Bukkit.getWorlds()) {
             for (Entity e : w.getEntities()) {
